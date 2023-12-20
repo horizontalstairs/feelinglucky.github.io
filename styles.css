@@ -36,7 +36,7 @@ input {
 
 h1 {
     font-family: 'Silkscreen';
-    font-size: 200px;
+    font-size: 150px;
     color:  rgb(72, 18, 78);
     text-shadow: 2px 2px 0 rgb(217, 128, 208), -2px -2px 0 rgb(244, 194, 238), 2px -2px 0 rgb(104, 11, 60), -2px 2px 0 rgb(253, 129, 216);
     margin: 0 auto;

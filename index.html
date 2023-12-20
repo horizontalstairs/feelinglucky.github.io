@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <title>The-Finals</title>
+</head>
+<body>
+   <div class="fade-in">
+    <h1>FEELING LUCKY?</h1>
+   </div>
+    <div class="button-container">
+        
+        <button onclick="startGame()">START</button>
+        <button class="rules-button" onclick="toggleDescriptionPopup()">Rules</button> <button class="restart-button" onclick="restartGame()">Restart</button>
+    </div>
+        <div id="description-popup">
+            <p>Rules: Input a nickname, select a door, choose 1 of the 5 choices, and... that's it ¯\_(ツ)_/¯ </p>
+            <p>Pretty simple enough. This is a small project i started working on as a beginner programmer. Hope whoever uses it enjoys!</p>
+            <button onclick="closeDescriptionPopup()">Close</button>
+        </div>
+
+    
+    
+            <div class="door-container" id="door-container"></div>
+
+
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCustomAlert()">&times;</span>
+            <p id="alert-message"></p>
+        </div>
+    </div>
+
+    <script src="description.js"></script>
+    <script src="gamescript.js"></script>
+    <script src="doors.js"></script>
+</body>
+
+</html>

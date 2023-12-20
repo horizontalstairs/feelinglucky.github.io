@@ -90,7 +90,7 @@ function checkResult(selectedDoor, winningDoor, doorElement) {
 
             if (selectedDoor === winningDoor) {
                 door.classList.add('winning-door-clicked');
-                var customMessage = 'Congratulations ' + playerName + '! You won!';
+                var customMessage = 'Congratulations ' + playerName + '!';
                 openCustomAlert(customMessage);
             } else {
                 door.classList.add('wrong-door');

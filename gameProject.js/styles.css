@@ -1,0 +1,211 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(185, 110, 185);
+    font-family: 'Arial', sans-serif;
+}
+
+input {
+    padding: 10px;
+    margin: 0 auto;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: "Silkscreen";
+    font-size: 18px;
+    box-shadow: -3px 3px 3px 3px black;
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+   to {
+    opacity: 1;
+   }
+}
+
+h1 {
+    font-family: 'Silkscreen';
+    font-size: 200px;
+    color:  rgb(72, 18, 78);
+    text-shadow: 2px 2px 0 rgb(217, 128, 208), -2px -2px 0 rgb(244, 194, 238), 2px -2px 0 rgb(104, 11, 60), -2px 2px 0 rgb(253, 129, 216);
+    margin: 0 auto;
+}
+
+button, .restart-button, .rules-button {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(223, 168, 219);
+    color: rgb(4, 4, 4);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Silkscreen';
+    text-align: center;
+    border: 2PX solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+#message-container {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+.door-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.door {
+    position: relative;
+    background: linear-gradient(180deg, #8B4513, #FFE4B5);
+    color: white;
+    width: 200px;
+    height: 450px;
+    margin: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Rubik Bubbles';
+    font-size: 35px;
+    border: 5px solid black;
+}
+
+.door:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 100%;
+    background-color: #CD853F; /* Door frame color */
+    transform: translateX(-50%);
+}
+
+.door.selected-door:before {
+    background-color: lightgreen; /* Door frame color for the selected door */
+}
+
+.door.winning-door-clicked {
+    background-color: #32CD32;
+    color: #32CD32; /* Door frame color for the winning door (green) */
+}
+
+.door.wrong-door {
+    background-color: red; /* Change the background color for wrong choices */
+    color: rgb(255, 0, 0);
+}
+
+
+#displayText {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+
+#description-popup {
+    display: none;
+    background-color: rgba(245, 212, 243, 0.8);
+    border: 2px solid rgb(60, 37, 67); /* Colored border */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    padding: 20px;
+    font-family: 'Silkscreen';
+    font-size: 20px;
+    text-align: center;
+    box-shadow: -3px 3px 3px 3px black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 30%;
+    z-index: 1000;
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    
+}
+
+.modal-content {
+    
+    background-color: rgb(232, 226, 111);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-family: "Silkscreen";
+    font-size: 26px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    z-index: 1;
+    border-radius:  25px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 50px;
+    font-family: 'Rubiks Bubbles';
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+@media (max-width: 450px) {
+    /* Adjust styles for iPhone web browser */
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    .doors{
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    input{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    button, .restart-button, .rules-button{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 20px auto;
+    }
+    #description-popup {
+        width: 70%;
+    }
+    .modal{
+        width: 80%;
+    }
+}
